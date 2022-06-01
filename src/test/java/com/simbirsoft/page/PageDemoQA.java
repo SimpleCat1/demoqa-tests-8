@@ -1,4 +1,4 @@
-package com.simbirsoft.Page;
+package com.simbirsoft.page;
 
 import com.codeborne.selenide.SelenideElement;
 

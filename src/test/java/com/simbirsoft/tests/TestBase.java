@@ -1,11 +1,11 @@
 package com.simbirsoft.tests;
 
 import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 
 public class TestBase {
-    @BeforeAll
-    public static void helperDriver() {
+    @BeforeEach
+    public void helperDriver() {
         Configuration.browser = "Firefox";
         Configuration.startMaximized = true;
     }

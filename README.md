@@ -1,1 +1,1 @@
-Здесь реализован PageObjects и Faker
+Здесь реализован параметризованных веб-тестов c аннотациями ScvSource, EnumSource, MethodSource
