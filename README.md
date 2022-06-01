@@ -1,1 +1,1 @@
-first test
+Здесь реализован PageObjects и Faker
