@@ -1,1 +1,1 @@
-Здесь реализован параметризованных веб-тестов c аннотациями ScvSource, EnumSource, MethodSource
+Здесь реализованы параметризованные веб-тесты c аннотациями ScvSource, EnumSource, MethodSource
