@@ -23,7 +23,7 @@ public class DemoQATests extends TestBase {
 
 
     @Test
-    public void fillingInFieldsWithData() {
+    public void fillFieldsWithData() {
         open(pageData.urlSite);
         page.insertTextInFirstNameArea(pageData.firstNameText);
         page.insertTextInLastNameArea(pageData.lastNameText);
@@ -46,7 +46,7 @@ public class DemoQATests extends TestBase {
     @CsvSource(value = {"alex, brian,wer@mail.ru,8888888888,3,2022,4,4 April,2022,sdfsdf",
             "олодол, ролж,wer@mail.ru,8888888887,3,2022,4,4 April,2022,sdfsdf"})
     @ParameterizedTest(name = "{index} - {0} is a palindrome")
-    public void fillingInFieldsDataFromScv(String firstNameText,
+    public void fillFieldsDataFromScv(String firstNameText,
                                                                                                           String lastNameText,
                                                                                                           String emailText,
                                                                                                           String mobileNumberText,
@@ -81,7 +81,7 @@ public class DemoQATests extends TestBase {
 
     @MethodSource("argsProviderFactory")
     @ParameterizedTest
-    public void fillingInFieldsDataFromMethods(String firstNameText,
+    public void fillFieldsDataFromMethods(String firstNameText,
                                                                                                               String lastNameText,
                                                                                                               String emailText,
                                                                                                               String mobileNumberText,
@@ -111,7 +111,7 @@ public class DemoQATests extends TestBase {
 
     @EnumSource(com.simbirsoft.data.DataForParamerizedTests.class)
     @ParameterizedTest
-    public void fillingInFieldsDataFromEnum(DataForParamerizedTests firstNameText) {
+    public void fillFieldsDataFromEnum(DataForParamerizedTests firstNameText) {
         open(pageData.urlSite);
         page.insertTextInFirstNameArea(firstNameText.getDescription());
         page.insertTextInLastNameArea(pageData.lastNameText);
