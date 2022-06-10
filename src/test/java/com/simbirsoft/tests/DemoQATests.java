@@ -46,15 +46,8 @@ public class DemoQATests extends TestBase {
     @CsvSource(value = {"alex, brian,wer@mail.ru,8888888888,3,2022,4,4 April,2022,sdfsdf",
             "олодол, ролж,wer@mail.ru,8888888887,3,2022,4,4 April,2022,sdfsdf"})
     @ParameterizedTest(name = "{index} - {0} is a palindrome")
-    public void fillFieldsDataFromScv(String firstNameText,
-                                                                                                          String lastNameText,
-                                                                                                          String emailText,
-                                                                                                          String mobileNumberText,
-                                                                                                          int monthInt,
-                                                                                                          int yearInt,
-                                                                                                          int dayInt,
-                                                                                                          String birthday,
-                                                                                                          String currentAddressText) {
+    public void fillFieldsDataFromScv(String firstNameText, String lastNameText, String emailText, String mobileNumberText,
+                                      int monthInt, int yearInt, int dayInt, String birthday, String currentAddressText) {
         open(pageData.urlSite);
         page.insertTextInFirstNameArea(firstNameText);
         page.insertTextInLastNameArea(lastNameText);
@@ -81,15 +74,8 @@ public class DemoQATests extends TestBase {
 
     @MethodSource("argsProviderFactory")
     @ParameterizedTest
-    public void fillFieldsDataFromMethods(String firstNameText,
-                                                                                                              String lastNameText,
-                                                                                                              String emailText,
-                                                                                                              String mobileNumberText,
-                                                                                                              int monthInt,
-                                                                                                              int yearInt,
-                                                                                                              int dayInt,
-                                                                                                              String birthday,
-                                                                                                              String currentAddressText) {
+    public void fillFieldsDataFromMethods(String firstNameText, String lastNameText, String emailText, String mobileNumberText,
+                                          int monthInt, int yearInt, int dayInt, String birthday, String currentAddressText) {
         open(pageData.urlSite);
         page.insertTextInFirstNameArea(firstNameText);
         page.insertTextInLastNameArea(lastNameText);
