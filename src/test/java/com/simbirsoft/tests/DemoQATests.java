@@ -46,7 +46,7 @@ public class DemoQATests extends TestBase {
     @CsvSource(value = {"alex, brian,wer@mail.ru,8888888888,3,2022,4,4 April,2022,sdfsdf",
             "олодол, ролж,wer@mail.ru,8888888887,3,2022,4,4 April,2022,sdfsdf"})
     @ParameterizedTest(name = "{index} - {0} is a palindrome")
-    public void fillingInFieldsWithDataFromScv(String firstNameText,
+    public void fillingInFieldsDataFromScv(String firstNameText,
                                                                                                           String lastNameText,
                                                                                                           String emailText,
                                                                                                           String mobileNumberText,
@@ -81,7 +81,7 @@ public class DemoQATests extends TestBase {
 
     @MethodSource("argsProviderFactory")
     @ParameterizedTest
-    public void fillingInFieldsWithDataFromMethods(String firstNameText,
+    public void fillingInFieldsDataFromMethods(String firstNameText,
                                                                                                               String lastNameText,
                                                                                                               String emailText,
                                                                                                               String mobileNumberText,
@@ -111,7 +111,7 @@ public class DemoQATests extends TestBase {
 
     @EnumSource(com.simbirsoft.data.DataForParamerizedTests.class)
     @ParameterizedTest
-    public void fillingInFieldsWithDataFromEnum(DataForParamerizedTests firstNameText) {
+    public void fillingInFieldsDataFromEnum(DataForParamerizedTests firstNameText) {
         open(pageData.urlSite);
         page.insertTextInFirstNameArea(firstNameText.getDescription());
         page.insertTextInLastNameArea(pageData.lastNameText);
